@@ -1,0 +1,15 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/images/123
+
+###
+
+POST http://localhost:3000/images
+Content-Type: application/json
+
+{
+    "name": "durham.jpg",
+    "numColors": 10
+}
