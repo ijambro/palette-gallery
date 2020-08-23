@@ -1,4 +1,5 @@
 const Express = require("express");
+const imagesData = require("data/images.json");
 
 console.log("Preparing to launch Express.js server");
 
@@ -18,7 +19,8 @@ function printReq(req, res, next) {
 }
 
 app.get("/", printReq, (req, res) => {
-    res.send("Hello World!");
+    //res.send("Hello World!");
+    res.json(imagesData);
 });
 
 app.get("/images/:id", printReq, (req, res) => {
@@ -26,6 +28,7 @@ app.get("/images/:id", printReq, (req, res) => {
 });
 
 app.post("/images", printReq, (req, res) => {
+    console.log(req.body);
     res.status(200);
     res.send("Image created!");
 });
