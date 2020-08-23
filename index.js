@@ -1,10 +1,12 @@
-const Express = require("express");
+const express = require("express");
 const imagesData = require("data/images.json");
 
 console.log("Preparing to launch Express.js server");
 
-const app = Express();
+const app = express();
 const port = 3000;
+
+app.set('view engine', 'ejs');
 
 function printReq(req, res, next) {
     console.log("Request query: ");
@@ -20,6 +22,12 @@ function printReq(req, res, next) {
 
 app.get("/", printReq, (req, res) => {
     //res.send("Hello World!");
+    res.render("pages/gallery", {
+        "imagesData": imagesData
+    });
+});
+
+app.get("/images", printReq, (req, res) => {
     res.json(imagesData);
 });
 
