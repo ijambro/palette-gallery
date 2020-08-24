@@ -1,5 +1,5 @@
 const express = require("express");
-const imagesData = require("data/images.json");
+const imagesData = require("./data/images.json");
 
 console.log("Preparing to launch Express.js server");
 

@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "numColors": 10,
+    "images": [
+        {
+            "name": "Durham.jpg",
+            "url": "https://i.ytimg.com/vi/tROD8wlw_l8/maxresdefault.jpg",
+            "country": "US",
+            "state": "North Carolina",
+            "city": "Durham",
+            "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+        },
+        {
+            "name": "Raleigh.jpg",
+            "url": "https://www.scarymommy.com/wp-content/uploads/2019/06/things-to-do-in-raleigh-with-kids.jpg",
+            "country": "US",
+            "state": "North Carolina",
+            "city": "Raleigh",
+            "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+        }
+    ]
+}
