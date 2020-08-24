@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include("../partials/head"); %>
+    <link href="/css/gallery.css" rel="stylesheet" type="text/css">
 </head>
 <body class="container">
 
@@ -14,8 +15,17 @@
         <h1>Your full image gallery</h1>
         <p>Click any image to see its color palette</p>
     </div>
-    <div class="well well-lg">
-        <p><%= JSON.stringify(imagesData) %></p>
+    <div class="grid well well-lg">
+        <ul>
+        <% for (let i=0; i < imagesData.images.length; i++) { %>
+            <% let imageData = imagesData.images[i]; %>
+            <li>
+                <a href="/images?name=<%= imageData.name %>">
+                    <img src="<%- imageData.url %>">
+                </a>
+            </li>
+        <% } %>
+        </ul>
     </div>
 </main>
 
