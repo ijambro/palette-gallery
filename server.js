@@ -34,7 +34,9 @@ app.get("/images", printReq, (req, res) => {
         return image.name === imageName;
     });
     console.log("Filtered to image JSON = " + JSON.stringify(imageData));
-    res.json(imageData);
+    res.render("pages/palette", {
+        "imageData": imageData
+    });
 });
 
 // app.get("/images/:id", printReq, (req, res) => {
