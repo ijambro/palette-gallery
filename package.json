@@ -4,8 +4,12 @@
   "description": "Dynamic web application (Node.js/Express) to display an image gallery with the color palette of each image",
   "main": "server.js",
   "scripts": {
+    "backupData": "mv data/images.json data/images-`date \"+%Y-%m-%d_%H-%M\"`.json || true",
+    "createData": "node createData.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "sass": "node-sass -w src/scss/ -o public/css/",
+    "imagemin": "imagemin src/images public/images -p"
   },
   "repository": {
     "type": "git",
@@ -24,7 +28,12 @@
   },
   "homepage": "https://github.com/ijambro/palette-gallery#readme",
   "dependencies": {
+    "command-line-args": "^5.1.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^4.14.1"
   }
 }
