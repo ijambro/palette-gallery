@@ -1,3 +1,11 @@
+# Image files
+src/images
+public/images
+
+# Updates to images.json (gallery data)
+data
+data/images.json
+
 # Logs
 logs
 *.log
@@ -38,8 +46,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/*
-!node_modules/data
+node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -103,3 +110,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Other...
