@@ -11,11 +11,8 @@ body {
   }
 
 .grid > ul > li {
-    background-color: coral;
-    height: 300px;
     width: 300px;
-    border: 3px solid cornflowerblue;
-    border-radius: .5rem;
+    height: 300px;
 }
 
 .grid > ul > li img {
