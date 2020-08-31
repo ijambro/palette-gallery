@@ -30,7 +30,8 @@
   "dependencies": {
     "command-line-args": "^5.1.1",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "get-image-colors": "^2.0.1"
   },
   "devDependencies": {
     "imagemin-cli": "^6.0.0",

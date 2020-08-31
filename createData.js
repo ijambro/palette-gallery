@@ -1,13 +1,14 @@
 const filesystem = require('fs');
 const path = require('path');
 const commandLineArgs = require('command-line-args');
-// const getColors = require('get-image-colors');
+const getColors = require('get-image-colors');
 const { isArray } = require('util');
 
 const FILENAME = "images.json";
 const VERSION = "0.0.1";
 const DEFAULT_IMG_DIR = path.join(__dirname, 'src', 'images');
 const DEFAULT_OUTPUT_DIR = path.join(__dirname, 'data');
+const HAS_IMAGE_FILE_TYPE = /\.(gif|jpg|png|svg)$/i;
 
 console.log('-- createData --');
 console.log();
@@ -67,12 +68,14 @@ async function process(imgDir, imgFilenames) {
     };
 
     for (const imgFilename of imgFilenames) {
-      const imgFilepath = path.join(imgDir, imgFilename);
-      
-      let imageData = await processImage(imgFilename, imgFilepath);
-      console.log('processImage returned:');
-      console.log(imageData);
-      imagesData.images.push(imageData);
+        if (HAS_IMAGE_FILE_TYPE.test(imgFilename)) {
+            const imgFilepath = path.join(imgDir, imgFilename);
+
+            let imageData = await processImage(imgFilename, imgFilepath);
+            console.log('processImage returned:');
+            console.log(imageData);
+            imagesData.images.push(imageData);      
+        }
     }
 
     saveOutputFile(OUTPUT_FILE, JSON.stringify(imagesData, null, 4));
@@ -84,8 +87,17 @@ async function process(imgDir, imgFilenames) {
     let imageData = {
         "name": imgFilename,
         "url": "/images/" + imgFilename,
-        "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+        "colors": []
     };
+
+    const colorOptions = {
+        count: options['num-colors']
+    };
+    const colorArray = await getColors(imgFilepath, colorOptions);
+
+    for (c of colorArray) {
+        imageData.colors.push(c.hex());
+    }
 
     return imageData;
   }
