@@ -16,7 +16,7 @@ console.log();
 
 let options = commandLineArgs([
   { name: 'input-dir', alias: 'd', type: String, defaultValue: DEFAULT_IMG_DIR },
-  { name: 'all-files', alias: 'a', type: Boolean, defaultValue: true },
+  { name: 'all-files', alias: 'a', type: Boolean, defaultValue: false },
   { name: 'input-files', alias: 'f', type: String, multiple: true, defaultOption: true },
   { name: 'num-colors', alias: 'c', type: Number, defaultValue: 11 },
   { name: 'output-dir', alias: 'o', type: String, defaultValue: DEFAULT_OUTPUT_DIR }
@@ -47,18 +47,18 @@ function createOutputDir() {
 
 async function getColorsFromSpecifiedImages() {
     const imgDir = options['input-dir'];
-    options['input-files'].forEach(imgFilename => {
-      const imgFilepath = path.join(imgDir, imgFilename);
-      
-      processImage(imgFilename, imgFilepath);
-      }
-    );
+    const allFiles = options['input-files'];
+    process(imgDir, allFiles);
 }
   
-  function getColorsFromAllImages() {
+function getColorsFromAllImages() {
     const imgDir = options['input-dir'];
     console.log('Loading all images from ' + imgDir);
-  
+    const allFiles = filesystem.readdirSync(imgDir);
+    process(imgDir, allFiles);
+}
+
+async function process(imgDir, imgFilenames) {
     let imagesData = {
         "version": VERSION,
         "generated": new Date(),
@@ -66,19 +66,28 @@ async function getColorsFromSpecifiedImages() {
         "images": []
     };
 
-    filesystem.readdirSync(imgDir).forEach(async imgFilename => {
+    for (const imgFilename of imgFilenames) {
       const imgFilepath = path.join(imgDir, imgFilename);
       
-      processImage(imgFilename, imgFilepath);
-    });
+      let imageData = await processImage(imgFilename, imgFilepath);
+      console.log('processImage returned:');
+      console.log(imageData);
+      imagesData.images.push(imageData);
+    }
 
-    saveOutputFile(OUTPUT_FILE, JSON.stringify(imagesData));
+    saveOutputFile(OUTPUT_FILE, JSON.stringify(imagesData, null, 4));
   }
 
   async function processImage(imgFilename, imgFilepath) {
     console.log('Processing image ' + imgFilepath);
 
-    //TODO
+    let imageData = {
+        "name": imgFilename,
+        "url": "/images/" + imgFilename,
+        "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+    };
+
+    return imageData;
   }
 
 async function saveOutputFile(filepath, content) {
