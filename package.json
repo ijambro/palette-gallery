@@ -8,7 +8,7 @@
     "createData": "node createData.js -a",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "sass": "node-sass -w src/scss/ -o public/css/",
+    "scss": "node-sass src/scss/ --output-style expanded --output public/css/",
     "imagemin": "imagemin src/images public/images -p"
   },
   "repository": {

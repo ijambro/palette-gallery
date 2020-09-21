@@ -1,0 +1,24 @@
+$box-size: 300px;
+
+body {
+    background-color: darkmagenta;
+    padding-top: 10px;
+}
+
+.grid > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    list-style-type: none;
+
+    > li {
+        width: $box-size;
+        height: $box-size;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
