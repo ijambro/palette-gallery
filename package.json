@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Dynamic web application (Node.js/Express) to display an image gallery with the color palette of each image",
   "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "backupData": "mv data/images.json data/images-`date \"+%Y-%m-%d_%H-%M\"`.json || true",
     "createData": "node createData.js -a",
