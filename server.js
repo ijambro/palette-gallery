@@ -4,7 +4,10 @@ const imagesData = require("./data/images.json");
 console.log("Preparing to launch Express.js server");
 
 const app = express();
-const port = 3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 5000;
+}
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
