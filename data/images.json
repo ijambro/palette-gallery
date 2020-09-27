@@ -1,23 +1,439 @@
 {
-    "version": "1.0.0",
-    "generated": "2020-08-23 12:00:00",
-    "numColors": 10,
+    "version": "0.0.1",
+    "generated": "2020-08-31T16:15:03.517Z",
+    "numColors": 11,
     "images": [
         {
-            "name": "Durham.jpg",
-            "url": "https://i.ytimg.com/vi/tROD8wlw_l8/maxresdefault.jpg",
-            "country": "US",
-            "state": "North Carolina",
-            "city": "Durham",
-            "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+            "name": "Alaska.jpg",
+            "url": "/images/Alaska.jpg",
+            "colors": [
+                "#e7e9d4",
+                "#156663",
+                "#211913",
+                "#53acb7",
+                "#6f9589",
+                "#2b8199",
+                "#7ebfba",
+                "#273f2c",
+                "#23a09a",
+                "#9c7c30"
+            ]
         },
         {
-            "name": "Raleigh.jpg",
-            "url": "https://www.scarymommy.com/wp-content/uploads/2019/06/things-to-do-in-raleigh-with-kids.jpg",
-            "country": "US",
-            "state": "North Carolina",
-            "city": "Raleigh",
-            "colors": [ "#FFF", "#000", "#F00", "#F0F", "#0FF", "#0F0", "#0F9", "#990", "#F99", "#09F"]
+            "name": "Arizona.jpg",
+            "url": "/images/Arizona.jpg",
+            "colors": [
+                "#402534",
+                "#fbfbfa",
+                "#de972f",
+                "#804225",
+                "#efc080",
+                "#eab066",
+                "#936140",
+                "#f7d596",
+                "#b2613c",
+                "#6c6c8b"
+            ]
+        },
+        {
+            "name": "Australia_Camel.jpg",
+            "url": "/images/Australia_Camel.jpg",
+            "colors": [
+                "#e6dcbc",
+                "#292b2d",
+                "#c9662e",
+                "#8a5f38",
+                "#3a6a85",
+                "#5e4635",
+                "#8aa9b5",
+                "#507e8b",
+                "#9ead8d",
+                "#b86456"
+            ]
+        },
+        {
+            "name": "California_Disneyland.jpg",
+            "url": "/images/California_Disneyland.jpg",
+            "colors": [
+                "#2d312b",
+                "#942e2b",
+                "#a6ae45",
+                "#ddd9dc",
+                "#8a6246",
+                "#df985a",
+                "#a7a693",
+                "#33aca9",
+                "#5b915f",
+                "#c2dc6c"
+            ]
+        },
+        {
+            "name": "California_Huntington_Beach-Van.jpg",
+            "url": "/images/California_Huntington_Beach-Van.jpg",
+            "colors": [
+                "#ddcfb2",
+                "#bf6b32",
+                "#233b39",
+                "#b17b53",
+                "#709c93",
+                "#5f351d",
+                "#386e65",
+                "#a47f77",
+                "#449484",
+                "#2c7c8c"
+            ]
+        },
+        {
+            "name": "California_ManhattanBeach-Pier.jpg",
+            "url": "/images/California_ManhattanBeach-Pier.jpg",
+            "colors": [
+                "#2b5c62",
+                "#b9bad0",
+                "#dda877",
+                "#79a0a1",
+                "#e4d199",
+                "#f7f0d0",
+                "#635344",
+                "#7e6d4d",
+                "#c28c9e",
+                "#4cc4b4"
+            ]
+        },
+        {
+            "name": "California_Yosemite-small.jpg",
+            "url": "/images/California_Yosemite-small.jpg",
+            "colors": [
+                "#d4ae91",
+                "#88b4a0",
+                "#2f231c",
+                "#4c8667",
+                "#856e5b",
+                "#cc4f4e",
+                "#5d2825",
+                "#2a5341",
+                "#849a8f",
+                "#5d6056"
+            ]
+        },
+        {
+            "name": "Canada_Vancouver.jpg",
+            "url": "/images/Canada_Vancouver.jpg",
+            "colors": [
+                "#3e4034",
+                "#e3dab8",
+                "#815438",
+                "#a99848",
+                "#728e79",
+                "#a3c9b4",
+                "#b8a56e",
+                "#f5f1df",
+                "#4a7c72",
+                "#a29385"
+            ]
+        },
+        {
+            "name": "Florida_KeyWest.jpg",
+            "url": "/images/Florida_KeyWest.jpg",
+            "colors": [
+                "#2b2b16",
+                "#6c4648",
+                "#e2bbc6",
+                "#656845",
+                "#c6a186",
+                "#7b767d",
+                "#f0ece2",
+                "#9ea2d2",
+                "#9b7374",
+                "#447448"
+            ]
+        },
+        {
+            "name": "Florida_Miami.jpg",
+            "url": "/images/Florida_Miami.jpg",
+            "colors": [
+                "#423439",
+                "#d6713a",
+                "#d8d7d6",
+                "#ab2225",
+                "#f9cf3f",
+                "#a89e9e",
+                "#746a63",
+                "#085fb2",
+                "#54a4ca",
+                "#5c346c"
+            ]
+        },
+        {
+            "name": "Florida_Miami_Beach.jpg",
+            "url": "/images/Florida_Miami_Beach.jpg",
+            "colors": [
+                "#f5b96d",
+                "#577b47",
+                "#e0890e",
+                "#d43d3c",
+                "#e36965",
+                "#9d976b",
+                "#d68d54",
+                "#f3ab93",
+                "#4f1718",
+                "#ecacb2"
+            ]
+        },
+        {
+            "name": "Hawaii_Airplane.jpg",
+            "url": "/images/Hawaii_Airplane.jpg",
+            "colors": [
+                "#e4dabd",
+                "#469697",
+                "#1a5a25",
+                "#342f1c",
+                "#d35024",
+                "#969c98",
+                "#e3a142",
+                "#485457",
+                "#92d3d3",
+                "#53bccd"
+            ]
+        },
+        {
+            "name": "Ireland_Dublin.jpg",
+            "url": "/images/Ireland_Dublin.jpg",
+            "colors": [
+                "#3f5d5d",
+                "#8e5044",
+                "#a1904b",
+                "#f0efeb",
+                "#93918e",
+                "#b8a196",
+                "#cbbf95",
+                "#bdbfbc",
+                "#dbceb9",
+                "#68b4b4"
+            ]
+        },
+        {
+            "name": "Italy_Venice_Underwater.jpg",
+            "url": "/images/Italy_Venice_Underwater.jpg",
+            "colors": [
+                "#588d95",
+                "#dae7e6",
+                "#9fb8b8",
+                "#156f76",
+                "#13383a",
+                "#3b5960",
+                "#76c7c5",
+                "#54603d",
+                "#7ebacc",
+                "#bc8c54"
+            ]
+        },
+        {
+            "name": "Montana-SeeAmerica-Mountains.jpg",
+            "url": "/images/Montana-SeeAmerica-Mountains.jpg",
+            "colors": [
+                "#e2bf77",
+                "#454647",
+                "#f9f8f7",
+                "#282517",
+                "#8c8b86",
+                "#7e7764",
+                "#acadaf",
+                "#242626",
+                "#9ca49c",
+                "#6c7464"
+            ]
+        },
+        {
+            "name": "Nevada_Las_Vegas_Skyline.jpg",
+            "url": "/images/Nevada_Las_Vegas_Skyline.jpg",
+            "colors": [
+                "#d5ae69",
+                "#2f4b4d",
+                "#8a7958",
+                "#5b8683",
+                "#9bb4a5",
+                "#20120a",
+                "#3b3010",
+                "#4e707e",
+                "#5f9cb2",
+                "#b94217"
+            ]
+        },
+        {
+            "name": "NewMexico_Arizona_Rockies.jpg",
+            "url": "/images/NewMexico_Arizona_Rockies.jpg",
+            "colors": [
+                "#6d2725",
+                "#a19684",
+                "#242633",
+                "#555567",
+                "#8e5233",
+                "#e0c18c",
+                "#8f6553",
+                "#bfc4a3",
+                "#e2d7bf",
+                "#3c5c5c"
+            ]
+        },
+        {
+            "name": "New_York_City.jpg",
+            "url": "/images/New_York_City.jpg",
+            "colors": [
+                "#ccb275",
+                "#77b2a7",
+                "#1b201c",
+                "#765a32",
+                "#42726a",
+                "#4f3314",
+                "#224949",
+                "#2a535f",
+                "#5a9197",
+                "#a42009"
+            ]
+        },
+        {
+            "name": "New_Zealand.jpg",
+            "url": "/images/New_Zealand.jpg",
+            "colors": [
+                "#98a9a7",
+                "#53453d",
+                "#20211d",
+                "#d9c8a0",
+                "#59686c",
+                "#817a8f",
+                "#746741",
+                "#a49868",
+                "#beb6a4",
+                "#524c64"
+            ]
+        },
+        {
+            "name": "Portland.jpg",
+            "url": "/images/Portland.jpg",
+            "colors": [
+                "#d7d4be",
+                "#a1c0c2",
+                "#254145",
+                "#a76a46",
+                "#ce7039",
+                "#336d7a",
+                "#a3a88c",
+                "#56564d",
+                "#507867",
+                "#353211"
+            ]
+        },
+        {
+            "name": "San_Francisco_City_by_the_Bay_Small.jpg",
+            "url": "/images/San_Francisco_City_by_the_Bay_Small.jpg",
+            "colors": [
+                "#f1a43e",
+                "#ba3b19",
+                "#d5dccc",
+                "#e9bd6d",
+                "#e1d09d",
+                "#b85c54",
+                "#a3d2c4",
+                "#847860",
+                "#eca8af",
+                "#8c9494"
+            ]
+        },
+        {
+            "name": "Seatle.jpg",
+            "url": "/images/Seatle.jpg",
+            "colors": [
+                "#213420",
+                "#78af7f",
+                "#e3ce6e",
+                "#edd9c4",
+                "#ce8228",
+                "#945a24",
+                "#9ebf8c",
+                "#b5874d",
+                "#ccd49d",
+                "#42a276"
+            ]
+        },
+        {
+            "name": "St_Louis.jpg",
+            "url": "/images/St_Louis.jpg",
+            "colors": [
+                "#41251a",
+                "#e14929",
+                "#e6d6be",
+                "#e4849a",
+                "#e26a76",
+                "#943727",
+                "#e69169",
+                "#f3704b",
+                "#e9bd3b",
+                "#b31c08"
+            ]
+        },
+        {
+            "name": "Texas.jpg",
+            "url": "/images/Texas.jpg",
+            "colors": [
+                "#2a261b",
+                "#f9efc6",
+                "#d17b07",
+                "#745530",
+                "#aaa191",
+                "#ba8b52",
+                "#e1ae63",
+                "#a56a1d",
+                "#693005",
+                "#5c6c64"
+            ]
+        },
+        {
+            "name": "USA_Illinois_Chicago-Sailboats.jpg",
+            "url": "/images/USA_Illinois_Chicago-Sailboats.jpg",
+            "colors": [
+                "#efd19e",
+                "#85a48b",
+                "#9acab4",
+                "#5a4c3a",
+                "#605245",
+                "#aca284",
+                "#776852",
+                "#9ecca9",
+                "#e2aa6c",
+                "#536d54"
+            ]
+        },
+        {
+            "name": "USA_NewJersey.jpg",
+            "url": "/images/USA_NewJersey.jpg",
+            "colors": [
+                "#424441",
+                "#a38c6b",
+                "#782d18",
+                "#994d24",
+                "#5f645d",
+                "#88573a",
+                "#986e3f",
+                "#7d745d",
+                "#c58e65",
+                "#b1a18d"
+            ]
+        },
+        {
+            "name": "WashingtonDC.jpg",
+            "url": "/images/WashingtonDC.jpg",
+            "colors": [
+                "#ece7db",
+                "#1d1b2a",
+                "#8198db",
+                "#e12d21",
+                "#694838",
+                "#7383be",
+                "#493229",
+                "#404167",
+                "#2c3c37",
+                "#515c83"
+            ]
         }
     ]
 }

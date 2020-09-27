@@ -1,6 +1,7 @@
-# Image files
+# Original resolution image files
 src/images
-public/images
+# Minified image files (imagemin-mozjpeg)
+# public/images
 
 # Updates to images.json (gallery data)
 data
