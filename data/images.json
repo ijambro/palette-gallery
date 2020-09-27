@@ -1,6 +1,6 @@
 {
     "version": "0.0.1",
-    "generated": "2020-08-31T16:15:03.517Z",
+    "generated": "2020-09-27T06:02:12.113Z",
     "numColors": 11,
     "images": [
         {
@@ -36,6 +36,22 @@
             ]
         },
         {
+            "name": "AthensVeniceAmsterdamLondon.jpg",
+            "url": "/images/AthensVeniceAmsterdamLondon.jpg",
+            "colors": [
+                "#e0ba9f",
+                "#232d3a",
+                "#a86844",
+                "#597e68",
+                "#686142",
+                "#d7721d",
+                "#b0b49f",
+                "#cb1811",
+                "#9097a6",
+                "#3c5b7e"
+            ]
+        },
+        {
             "name": "Australia_Camel.jpg",
             "url": "/images/Australia_Camel.jpg",
             "colors": [
@@ -49,6 +65,38 @@
                 "#507e8b",
                 "#9ead8d",
                 "#b86456"
+            ]
+        },
+        {
+            "name": "Brazil_Rio-Copacabana.jpg",
+            "url": "/images/Brazil_Rio-Copacabana.jpg",
+            "colors": [
+                "#1f2d49",
+                "#c92d19",
+                "#f3eadd",
+                "#e0b88a",
+                "#a5b5cd",
+                "#c29654",
+                "#929eb5",
+                "#6d96a4",
+                "#e5cead",
+                "#c9c0c7"
+            ]
+        },
+        {
+            "name": "Brazil_Rio.jpg",
+            "url": "/images/Brazil_Rio.jpg",
+            "colors": [
+                "#6d947d",
+                "#232a25",
+                "#d4cb87",
+                "#287547",
+                "#859e29",
+                "#80b4c3",
+                "#aead8d",
+                "#d30f72",
+                "#b8d58f",
+                "#525d5a"
             ]
         },
         {
@@ -132,6 +180,22 @@
             ]
         },
         {
+            "name": "CapeCod.jpg",
+            "url": "/images/CapeCod.jpg",
+            "colors": [
+                "#0b2a38",
+                "#ef8807",
+                "#b2a888",
+                "#e5dfd3",
+                "#687461",
+                "#bd1c1b",
+                "#0a7082",
+                "#edcf39",
+                "#28a19f",
+                "#0589a4"
+            ]
+        },
+        {
             "name": "Florida_KeyWest.jpg",
             "url": "/images/Florida_KeyWest.jpg",
             "colors": [
@@ -180,6 +244,22 @@
             ]
         },
         {
+            "name": "France_Antibes_Juan_Les_Pins.jpg",
+            "url": "/images/France_Antibes_Juan_Les_Pins.jpg",
+            "colors": [
+                "#ebe8d0",
+                "#4ab5d2",
+                "#656363",
+                "#146e57",
+                "#7cc2a4",
+                "#98ae70",
+                "#d14939",
+                "#7fa977",
+                "#492929",
+                "#45372a"
+            ]
+        },
+        {
             "name": "Hawaii_Airplane.jpg",
             "url": "/images/Hawaii_Airplane.jpg",
             "colors": [
@@ -212,6 +292,38 @@
             ]
         },
         {
+            "name": "Istanbul.jpg",
+            "url": "/images/Istanbul.jpg",
+            "colors": [
+                "#1b666b",
+                "#ca7d70",
+                "#f6f3ed",
+                "#6b6474",
+                "#591f19",
+                "#d7af8c",
+                "#885330",
+                "#6ab6bf",
+                "#a695a0",
+                "#4cbcc1"
+            ]
+        },
+        {
+            "name": "Italy_Capri_Sunbather.jpg",
+            "url": "/images/Italy_Capri_Sunbather.jpg",
+            "colors": [
+                "#070708",
+                "#8794a3",
+                "#fafaf9",
+                "#ab7844",
+                "#bd2b2f",
+                "#49505c",
+                "#ce955e",
+                "#7e5d63",
+                "#acc4be",
+                "#b0b8cc"
+            ]
+        },
+        {
             "name": "Italy_Venice_Underwater.jpg",
             "url": "/images/Italy_Venice_Underwater.jpg",
             "colors": [
@@ -225,6 +337,38 @@
                 "#54603d",
                 "#7ebacc",
                 "#bc8c54"
+            ]
+        },
+        {
+            "name": "Japan-colorful.jpg",
+            "url": "/images/Japan-colorful.jpg",
+            "colors": [
+                "#12846e",
+                "#e0d4c6",
+                "#68b48f",
+                "#dd6f30",
+                "#89548b",
+                "#99cbad",
+                "#da829f",
+                "#c3ac68",
+                "#d3a893",
+                "#17bad8"
+            ]
+        },
+        {
+            "name": "Johannesburg.jpg",
+            "url": "/images/Johannesburg.jpg",
+            "colors": [
+                "#0c5755",
+                "#ec984e",
+                "#ebd8bb",
+                "#4996a6",
+                "#f0b164",
+                "#84b9be",
+                "#f4eddc",
+                "#bf725d",
+                "#69a496",
+                "#c3a290"
             ]
         },
         {
@@ -308,6 +452,22 @@
             ]
         },
         {
+            "name": "Paris-Blue.jpg",
+            "url": "/images/Paris-Blue.jpg",
+            "colors": [
+                "#e7d4ad",
+                "#095c8a",
+                "#7199b3",
+                "#de2637",
+                "#232429",
+                "#6ca1d0",
+                "#223652",
+                "#7fbbd8",
+                "#3b8db5",
+                "#1d224f"
+            ]
+        },
+        {
             "name": "Portland.jpg",
             "url": "/images/Portland.jpg",
             "colors": [
@@ -321,6 +481,22 @@
                 "#56564d",
                 "#507867",
                 "#353211"
+            ]
+        },
+        {
+            "name": "Redwoods.jpg",
+            "url": "/images/Redwoods.jpg",
+            "colors": [
+                "#d6bc9a",
+                "#34291d",
+                "#895f45",
+                "#654a33",
+                "#9c9e80",
+                "#665e55",
+                "#6f6f55",
+                "#4f4e39",
+                "#8e8d86",
+                "#b34e32"
             ]
         },
         {
