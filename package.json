@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "scss": "node-sass src/scss/ --output-style expanded --output public/css/",
-    "imagemin": "imagemin src/images public/images -p"
+    "imagemin": "imagemin src/images --out-dir=public/images --plugin=mozjpeg --plugin.mozjpeg.quality=30"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "imagemin-cli": "^6.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
     "node-sass": "^4.14.1"
   },
   "engines": {
