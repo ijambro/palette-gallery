@@ -52,4 +52,8 @@ app.post("/images", printReq, (req, res) => {
     res.send("Image created!");
 });
 
+app.get("/about", printReq, (req, res) => {
+    res.render("pages/about");
+});
+
 app.listen(port, () => console.log("Express.js server is listening on port " + port));
