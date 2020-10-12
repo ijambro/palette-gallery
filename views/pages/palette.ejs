@@ -38,7 +38,10 @@
                 <ul>
                 <% for (let i=0; i < imageData.colors.length; i++) { %>
                     <% let color = imageData.colors[i]; %>
-                    <li style="background-color: <%= color %>;"><%= color %></li>
+                    <li style="background-color: <%= color %>;"
+                        onclick="document.body.style.backgroundColor = '<%= color %>';">
+                        <%= color %>
+                    </li>
                 <% } %>
                 </ul>
             </div>
@@ -72,7 +75,7 @@
 
 <footer>
     <%- include("../partials/footer"); %>
-    <p>Background color from Vintage Travel / <a href="/images?name=Alaska.jpg">Alaska</a>.</p>
+    <p>Default background color from Vintage Travel / <a href="/images?name=Alaska.jpg">Alaska</a>.</p>
 </footer>
 
 </body>
