@@ -3,12 +3,13 @@ const path = require('path');
 const commandLineArgs = require('command-line-args');
 const getColors = require('get-image-colors');
 const { isArray } = require('util');
+const { folderToTree } = require('folder-to-tree');
 
 const FILENAME = "images.json";
 const VERSION = "0.0.1";
 const DEFAULT_IMG_DIR = path.join(__dirname, 'src', 'images');
 const DEFAULT_OUTPUT_DIR = path.join(__dirname, 'data');
-const HAS_IMAGE_FILE_TYPE = /\.(gif|jpg|png|svg)$/i;
+const HAS_IMAGE_FILE_TYPE = /\.(gif|jpg|jpeg|png|svg)$/i;
 
 console.log('-- createData --');
 console.log();
@@ -24,6 +25,7 @@ let options = commandLineArgs([
 ]);
 
 console.log(options);
+console.log();
 
 const OUTPUT_FILE = path.join(options['output-dir'], FILENAME);
 
@@ -67,18 +69,54 @@ async function process(imgDir, imgFilenames) {
         "images": []
     };
 
-    for (const imgFilename of imgFilenames) {
-        if (HAS_IMAGE_FILE_TYPE.test(imgFilename)) {
-            const imgFilepath = path.join(imgDir, imgFilename);
+    let folderToTreeOptions = {
+      isIgnoreHiddenFolderOrFile: true,
+      ignoreFilePattern: /node_modules/,
+      reachLeafNodeCallback: processImageFile
+    };
+  
+    let imageData = await folderToTree(options['input-dir'], folderToTreeOptions);
+    console.log('folderToTree returned:');
+    console.log(imageData);
+    imagesData.images.push(imageData); 
 
-            let imageData = await processImage(imgFilename, imgFilepath);
-            console.log('processImage returned:');
-            console.log(imageData);
-            imagesData.images.push(imageData);      
-        }
-    }
+    // for (const imgFilename of imgFilenames) {
+    //     if (HAS_IMAGE_FILE_TYPE.test(imgFilename)) {
+    //         const imgFilepath = path.join(imgDir, imgFilename);
+
+    //         let imageData = await processImage(imgFilename, imgFilepath);
+    //         console.log('processImage returned:');
+    //         console.log(imageData);
+    //         imagesData.images.push(imageData);      
+    //     }
+    // }
 
     saveOutputFile(OUTPUT_FILE, JSON.stringify(imagesData, null, 4));
+  }
+
+  function processImageDummy(imgFilepath) {
+    console.log('Processing dummy image ' + imgFilepath);
+    let imgFilename = imgFilepath.substring(imgFilepath.lastIndexOf("/") + 1);
+
+    let imageData = {
+        "name": imgFilename,
+        "url": "/images/" + imgFilename,
+        "colors": []
+    };
+
+    return imageData;
+  }
+
+  async function processImageFile(imgFilepath) {
+    console.log('Processing image file ' + imgFilepath);
+    let imgFilename = imgFilepath.substring(imgFilepath.lastIndexOf("/") + 1);
+
+    if (HAS_IMAGE_FILE_TYPE.test(imgFilename)) {
+      return await processImage(imgFilename, imgFilepath);
+    }
+    else {
+      return null;
+    }
   }
 
   async function processImage(imgFilename, imgFilepath) {
