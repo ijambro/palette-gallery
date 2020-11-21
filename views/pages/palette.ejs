@@ -34,10 +34,14 @@
             </div>
         </p>
         <div class="row">
-            <div class="colors col-md-4">
+            <% let colorIndex = 0; %>
+            <% let numColumnsOfColors = 2; //Allowed: 1, 2, or 3 with changes to col widths for colors and poster divs %>
+            <% let colorsPerColumn = imageData.colors.length / numColumnsOfColors; %>
+            <% for (let column = 1; column <= numColumnsOfColors; column++) { %>
+            <div class="colors col-md-2 col-sm-2 col-xs-6">
                 <ul>
-                <% for (let i=0; i < imageData.colors.length; i++) { %>
-                    <% let color = imageData.colors[i]; %>
+                <% for (; colorIndex < column * colorsPerColumn; colorIndex++) { %>
+                    <% let color = imageData.colors[colorIndex]; %>
                     <li style="background-color: <%= color %>;"
                         onclick="document.body.style.backgroundColor = '<%= color %>';">
                         <%= color %>
@@ -45,7 +49,8 @@
                 <% } %>
                 </ul>
             </div>
-            <div class="poster col-md-8">
+            <% } %>
+            <div class="poster col-md-6 col-sm-8 col-xs-12">
                 <img src="<%- imageData.url %>">
             </div>
         </div>
