@@ -3,6 +3,12 @@
 <head>
     <%- include("../partials/head"); %>
     <link href="/css/palette.css" rel="stylesheet" type="text/css">
+    <script src="/js/palette.js"></script>
+    <script>
+        // alert("Passing imageData from server-side to client-side JavaScript...");
+        var imageDataJson = <%-JSON.stringify(imageData)%>;
+        var imageDataObject = eval(imageDataJson);
+    </script>
 </head>
 <body class="container">
 
@@ -23,13 +29,13 @@
                     Use this palette... <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#" data-toggle="modal" data-target="#codeModal">HTML</a></li>
+                    <li><a onclick="showPalette('html', imageDataObject)" data-toggle="modal" data-target="#codeModal">HTML</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#codeModal">CSS</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#codeModal">SCSS</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#codeModal">SASS</a></li>
+                    <li><a onclick="showPalette('css', imageDataObject)" data-toggle="modal" data-target="#codeModal">CSS</a></li>
+                    <li><a onclick="showPalette('sass', imageDataObject)" data-toggle="modal" data-target="#codeModal">SCSS</a></li>
+                    <li><a onclick="showPalette('scss', imageDataObject)" data-toggle="modal" data-target="#codeModal">SASS</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#" data-toggle="modal" data-target="#codeModal">JavaScript</a></li>
+                    <li><a onclick="showPalette('js', imageDataObject)" data-toggle="modal" data-target="#codeModal">JavaScript</a></li>
                 </ul>
             </div>
         </p>
@@ -38,7 +44,7 @@
             <% let numColumnsOfColors = 2; //Allowed: 1, 2, or 3 with changes to col widths for colors and poster divs %>
             <% let colorsPerColumn = imageData.colors.length / numColumnsOfColors; %>
             <% for (let column = 1; column <= numColumnsOfColors; column++) { %>
-            <div class="colors col-md-2 col-sm-2 col-xs-6">
+            <div class="colors col-md-2 col-sm-2 col-xs-4">
                 <ul>
                 <% for (; colorIndex < column * colorsPerColumn; colorIndex++) { %>
                     <% let color = imageData.colors[colorIndex]; %>
@@ -67,7 +73,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="codeModalText">
                 Coming soon: code to use this palette should appear here!
             </div>
             <div class="modal-footer">
