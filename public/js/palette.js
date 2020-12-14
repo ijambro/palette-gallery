@@ -21,3 +21,18 @@ function generateList(imageData) {
 function setPaletteText(text) {
     document.getElementById("codeModalText").innerText = text;
 }
+
+
+function updateCoolorsLink(imageData) {
+    let link = "https://coolors.co/" + generateDashSeparatedColors(imageData);
+    setCoolorsLink(link);
+}
+
+function generateDashSeparatedColors(imageData) {
+    let text = new String(imageData.colors);
+    return text.replaceAll("#", "").replaceAll(",", "-");
+}
+
+function setCoolorsLink(link) {
+     document.getElementById("coolorsLink").href = link;
+}

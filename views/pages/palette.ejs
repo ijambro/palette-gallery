@@ -38,6 +38,11 @@
                     <li><a onclick="showPalette('js', imageDataObject)" data-toggle="modal" data-target="#codeModal">JavaScript</a></li>
                 </ul>
             </div>
+            <a id="coolorsLink" href="https://coolors.co/ffffff-ff0000-000000" target="_new" 
+            class="btn btn-lg btn-primary" role="button"
+            data-toggle="tooltip" title="Coolors.co allows you to adjust and export your palette in a wide variety of formats">
+                View palette on Coolors
+            </a>
         </p>
         <div class="row">
             <% let colorIndex = 0; %>
@@ -88,6 +93,13 @@
     <%- include("../partials/footer"); %>
     <p>Default background color from Vintage Travel / <a href="/images?name=Alaska.jpg">Alaska</a>.</p>
 </footer>
+
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    updateCoolorsLink(imageDataObject);
+</script>
 
 </body>
 </html>
