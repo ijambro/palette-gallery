@@ -5,7 +5,6 @@ function showPalette(type, imageData) {
 
 function generatePaletteText(type, imageData) {
     switch(type) {
-        //TODO: Replace each generateList call with a specific generateX function
         case "html": return generateHTML(imageData.colors);
         case "css": return generateCSS(imageData.colors);
         case "scss": return generateSCSS(imageData.colors);
@@ -61,10 +60,31 @@ function setCoolorsLink(link) {
 }
 
 function copyToClipboard() {
-    let text = document.getElementById("codeModalText").innerText;
-    navigator.clipboard.writeText(text);
+    doCopyForOldBrowsers();
     document.getElementById("alertCopySuccess").style.setProperty("display", "inline");
     setTimeout(() => {
         document.getElementById("alertCopySuccess").style.setProperty("display", "none");
     }, 3000);
+}
+
+function doCopyForNewBrowsers() {
+    let text = document.getElementById("codeModalText").innerText;
+    navigator.clipboard.writeText(text);
+}
+
+function doCopyForOldBrowsers() {
+    selectText("codeModalText");
+    document.execCommand("copy");
+}
+
+function selectText(elementId) {
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(elementId));
+        range.select();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(elementId));
+        window.getSelection().addRange(range);
+    }
 }
