@@ -59,3 +59,12 @@ function generateDashSeparatedColors(imageData) {
 function setCoolorsLink(link) {
      document.getElementById("coolorsLink").href = link;
 }
+
+function copyToClipboard() {
+    let text = document.getElementById("codeModalText").innerText;
+    navigator.clipboard.writeText(text);
+    document.getElementById("alertCopySuccess").style.setProperty("display", "inline");
+    setTimeout(() => {
+        document.getElementById("alertCopySuccess").style.setProperty("display", "none");
+    }, 3000);
+}

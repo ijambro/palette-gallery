@@ -12,6 +12,7 @@
         // Initialization when the DOM is ready
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="dropdown"]').tooltip();
             updateCoolorsLink(imageDataObject);
         });
     </script>
@@ -31,7 +32,9 @@
     <div class="well">
         <p>
             <div class="btn-group">
-                <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown" 
+                title="Export these colors to use in your own web design"
+                aria-haspopup="true" aria-expanded="false">
                     Use this palette... <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -83,12 +86,14 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            
             <div class="modal-body pre-scrollable" id="codeModalText">
                 Code to use this palette should appear here!
             </div>
             <div class="modal-footer">
+                <span id="alertCopySuccess" class="alert alert-success" role="alert">Copied!</span>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Copy to clipboard</button>
+                <button id="copyToClipboard" type="button" class="btn btn-primary" onclick="copyToClipboard()">Copy to clipboard</button>
             </div>
         </div>
     </div>
