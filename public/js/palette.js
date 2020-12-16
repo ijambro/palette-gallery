@@ -6,16 +6,39 @@ function showPalette(type, imageData) {
 function generatePaletteText(type, imageData) {
     switch(type) {
         //TODO: Replace each generateList call with a specific generateX function
-        case "html": return generateList(imageData);
-        case "css": return generateList(imageData);
-        case "scss": return generateList(imageData);
-        case "sass": return generateList(imageData);
-        case "js": return generateList(imageData);
+        case "html": return generateHTML(imageData.colors);
+        case "css": return generateCSS(imageData.colors);
+        case "scss": return generateSCSS(imageData.colors);
+        case "json": return generateJson(imageData.colors);
     }
 }
 
-function generateList(imageData) {
-    return imageData.colors;
+function generateHTML(colors) {
+    let colorString = "<style>\n";
+    colorString += generateCSS(colors);
+    colorString += "\n</style>";
+    return colorString;
+}
+
+function generateCSS(colors) {
+    let colorString = ":root {\n";
+    for (let i = 0; i < colors.length; i++) {
+        colorString += ("--color" + (i + 1) + ": " + colors[i] + ";\n");
+    }
+    colorString += "}";
+    return colorString;
+}
+
+function generateSCSS(colors) {
+    let colorString = "";
+    for (let i = 0; i < colors.length; i++) {
+        colorString += ("$color" + (i + 1) + ": " + colors[i] + ";\n");
+    }
+    return colorString;
+}
+
+function generateJson(colors) {
+    return JSON.stringify(colors);
 }
 
 function setPaletteText(text) {
